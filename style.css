@@ -1,0 +1,64 @@
+@media screen and (max-width: 900px){
+  svg {
+    width: 90% !important;
+  } 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+svg {
+  width: 50%;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 700;
+  }
+}
+
+@keyframes fadeInColor {
+  to {
+    fill: black;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.logo {
+  stroke: black;
+  fill: white;
+  stroke-width: 0.5px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+#h-logo {
+  animation: dash 3s linear forwards, fadeInColor 1s 6s linear forwards;
+}
+
+#e-logo {
+  transform: rotate(180deg);
+  transform-origin: 37% 65%;
+  animation: dash 3s 2s linear forwards, fadeInColor 0.5s 6.5s linear forwards, rotate 1s 6s linear forwards;
+}
+
+#l1-logo {
+  animation: dash 3s 3s linear forwards, fadeInColor 1s 6s linear forwards;
+}
+
+#l2-logo {
+  animation: dash 3s 4s linear forwards, fadeInColor 1s 6s linear forwards;
+}
+
+#o-logo {
+  animation: dash 3s 5s linear forwards, fadeInColor 1s 6s linear forwards;
+}
